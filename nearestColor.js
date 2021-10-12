@@ -83,8 +83,6 @@
       })
     }
 
-    console.info('orderedListorderedList', )
-
     const sorted = orderedList.sort((a, b) => a.distance - b.distance)
 
     return {
@@ -217,7 +215,6 @@
       return parseColor(nearestColor.STANDARD_COLORS[source]);
     }
 
-    console.info('source', source)
     var hexMatch = source.match(/^#?((?:[0-9a-f]{3}){1,2})$/i);
     if (hexMatch) {
       hexMatch = hexMatch[1];
