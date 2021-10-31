@@ -62,9 +62,7 @@
 
     var orderedList = []
     var distanceSq,
-        minDistanceSq = Infinity,
-        rgb,
-        value;
+        rgb;
 
     colors || (colors = nearestColor.DEFAULT_COLORS);
 
@@ -86,8 +84,8 @@
     const sorted = orderedList.sort((a, b) => a.distance - b.distance)
 
     return {
-      match: sorted[0],
-      nearestList: sorted.slice(1, 3)
+      recommended: sorted.slice(0, 3),
+      nearestList: sorted.slice(2, 9)
     }
   }
 
